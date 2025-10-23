@@ -10,11 +10,12 @@ from my_proof.config import settings
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
+
 def run() -> None:
     """Generate proofs for all input files."""
     # logging.info(f"Using config: {settings.model_dump_json(indent=2)}")
-    
-    settings.DLP_ID = 185 # TODO: Set your own DLP ID here
+
+    settings.DLP_ID = 185  # Set to correct DLP ID for AnnaDatadao2
 
     input_files_exist = os.path.isdir(settings.INPUT_DIR) and bool(os.listdir(settings.INPUT_DIR))
 
